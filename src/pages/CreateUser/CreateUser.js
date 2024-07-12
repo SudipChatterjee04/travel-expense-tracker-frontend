@@ -20,6 +20,7 @@ const CreateUser = () => {
     try {
       const response = await axios.post('https://travel-expense-tracker-psi.vercel.app/api/signup', formData);
       console.log('Response:', response.data);
+      alert("User Added Succesfully")
     } catch (error) {
       console.error('Error:', error);
     }
