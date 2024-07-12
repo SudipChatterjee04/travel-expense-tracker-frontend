@@ -1,11 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import ExpenseForm from '../../components/expenseForm/expenseForm';
 
 const Expense = () => {
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate("/");
+  };
   return (
     <div>
-        <h1>Expense</h1>
-        <Link to="/">Go to Home</Link>
+      <h1 className="text-center text-[40px] font-bold">Expense Till Now Page</h1>
+      <div className="flex pl-[20px]">
+        <button
+          className="p-2 outline-none border-2 border-black bg-gray-400 rounded-md hover:text-white hover:bg-black cursor-pointer"
+          onClick={goToHome}
+        >
+          Home
+        </button>
+      </div>
+      <ExpenseForm />
     </div>
   )
 }
