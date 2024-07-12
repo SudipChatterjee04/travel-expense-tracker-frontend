@@ -204,12 +204,18 @@ const ExpenseForm = () => {
             <option value="Other">Other</option>
           </select>
         </div>
-        <button
+        {/* <button
           className="p-2 border-gray-600 bg-gray-400 rounded-md w-[100px]"
-          type="submit"
+          type="submit" 
         >
           Submit
-        </button>
+        </button> */}
+        <button
+        className={`p-2 border-gray-600 rounded-md w-[100px] bg-gray-400`}
+        type="submit"
+      >
+        Submit
+      </button>
       </form>
     </div>
   );
